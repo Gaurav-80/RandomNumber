@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+
+</head>
+<body onload="init()">
+<main>
+	
+	<div id="welcome">
+		<h2>Guess The Random Number 1-50</h2>
+		<img class="image" src="image/pic.jpg" alt="logo">
+        <section class="eventSection">
+        	<p>Select Difficulty</p>
+        	<div class="button">
+        		<button onclick="easyMode()">Easy 10 Attempts</button>
+        		<button onclick="hardMode()">Hard 5 Attempts</button>
+        	</div>
+        	</section>
+        	</div>
+
+
+        <!-- game code -->
+          
+          <div id="game">
+ 	<div id="gamebutton">
+    <button onclick="newGameBegin()">New Game</button> 		
+ 	</div>
+
+         <section>
+       	<h3 id="textoutput">Your Guess</h3>
+        <input type="Number" id="input-box" 
+        min="1" max="50" placeholder="Enter your Guess" onchange="compareGuess()" />
+</section>
+
+    <section class="stats">
+    	<div class="info">
+    		<p>Number of previous attempts</p>
+    		<span id="attempts">0</span>
+	   </div>
+	   <div class="info">
+    		<p>Number of previous guesses</p>
+    		<span id="guesses">0</span>
+    	</div>
+    	</section>
+    </div>
+
+</main>
+
+<script src="scrpit.js"></script>
+</body>
+</html>
